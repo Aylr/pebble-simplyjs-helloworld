@@ -9,11 +9,13 @@ simply.on('singleClick', function(e) {
   simply.body('You pressed the ' + e.button + ' button!');
 
   if (e.button == "down") {
-  	ajax({ url: 'http://simplyjs.io' }, function(data){
-	  var headline = data.match(/<h1>(.*?)<\/h1>/)[1];
+  	ajax({ url: 'https://api.ipify.org' }, function(data){
+	  var headline = data;
 	  simply.title(headline);
 	});
   } else if (e.button == "up"){
   	simply.body("");
+    simply.title("");
+    simply.subtitle("");
   }
 });
