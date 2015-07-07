@@ -1,4 +1,4 @@
-var url = "http://arm.local:8080/api/status"
+var url = "http://10.0.1.22:8080/api/status"
 
 
 simply.fullscreen(true);
@@ -21,7 +21,7 @@ simply.on('singleClick', function(e) {
         simply.subtitle("");
 
         ajax({
-                url: "arm.local:8080/sn?pw=opendoor&sid=4&set_to=0"
+                url: "10.0.1.22:8080/sn?pw=opendoor&sid=4&set_to=0"
             },
             function(data) {
                 simply.body(data);
@@ -32,7 +32,7 @@ simply.on('singleClick', function(e) {
         simply.subtitle("");
 
         ajax({
-            url: "arm.local:8080/sn?pw=opendoor&sid=4&set_to=1"
+            url: "10.0.1.22:8080/sn?pw=opendoor&sid=4&set_to=1"
         }, function(data) {
             simply.body(data);
         });
